@@ -20,7 +20,7 @@ def pci_devs():
     '''
 
     def find_devices_of_class(klass):
-        lspci = salt.utils.which('lspci')
+        lspci = salt.utils.path.which('lspci')
 
         if lspci:
             p = subprocess.Popen([lspci, "-mm", "-n"], stdout=subprocess.PIPE)
